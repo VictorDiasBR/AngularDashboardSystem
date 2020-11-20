@@ -1,6 +1,10 @@
 table {
   width: 80%;
-  min-width: 530px;
+  min-width: 500px;
   max-width: 600px;
+  margin-top: -84%;
   margin-top: fixed;
+}
+th.mat-sort-header-sorted {
+  color: black;
 }

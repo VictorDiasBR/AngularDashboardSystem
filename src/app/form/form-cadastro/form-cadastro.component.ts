@@ -1,8 +1,9 @@
 import { Component } from "@angular/core";
-import { RequestAluno } from "../form.model";
+import { RequestAluno, Aluno } from "../form.model";
 import { FormService } from "../form.service";
 import { FormControl, FormGroup } from "@angular/forms";
 //import { DashboardEstrategicoComponent } from "./src/app/dashboard-estrategico/dashboard-estrategico.component";
+import { MatSnackBar } from "@angular/material/snack-bar";
 @Component({
   selector: "app-form-cadastro",
   templateUrl: "./form-cadastro.component.html",
@@ -18,29 +19,22 @@ export class FormCadastroComponent {
     //media: new FormControl("")
   });
   request: RequestAluno;
-  constructor(private formService: FormService) {}
+  alunos: Aluno[] = [];
+  constructor(
+    private formService: FormService,
+    private _snackBar: MatSnackBar
+  ) {}
 
   ngAfterViewInit() {}
-  salvar() {
+  salvar(nome) {
     console.log("aluno - ");
     console.log(this.aluno.value);
     this.request = this.aluno.value;
     this.formService.createAluno(this.request).subscribe((res) => {
       console.log(res);
     });
-    //var av1 = this.aluno.get("av1");
-    //var av2 = this.aluno.get("av2");
-    //var av3 = this.aluno.get("av3");
-    // var media = (av1 + av2 + av3) / 3;
-    //var num: number;
-
-    //this.aluno
-    //.get("media")
-    // .reset(
-    // (parseInt(av1.value, num) +
-    //  parseInt(av2.value, num) +
-    //parseInt(av3.value, num)) /
-    //3
-    //);
+    this._snackBar.open("O aluno " + nome + " foi criado!", "Ok!", {
+      duration: 2000
+    });
   }
 }

@@ -1,9 +1,10 @@
 table {
-  width: 80%;
+  width: 90%;
   min-width: 500px;
   max-width: 600px;
-  margin-top: -84%;
+  margin-top: -88%;
   margin-top: fixed;
+  height: 330px;
 }
 th.mat-sort-header-sorted {
   color: black;

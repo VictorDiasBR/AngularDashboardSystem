@@ -7,7 +7,7 @@ import { AppState } from "../../app.state.card";
 import { Observable } from "rxjs";
 import { Store } from "@ngrx/store";
 import * as CardActions from "../../actions/project.actions";
-
+import { MatSnackBar } from "@angular/material/snack-bar";
 @Component({
   selector: "app-form-obs",
   templateUrl: "./form-obs.component.html",
@@ -33,7 +33,8 @@ export class FormObsComponent {
 
   constructor(
     private formService: FormService,
-    private store: Store<AppState>
+    private store: Store<AppState>,
+    private _snackBar: MatSnackBar
   ) {}
 
   ngOnInit() {
@@ -72,7 +73,7 @@ export class FormObsComponent {
     }
   }
 
-  addCard() {
+  addCard(nome) {
     console.log(this.aluno.value);
     this.aluno.get("nome").reset(this.nomeSelected);
     for (const i of this.alunos) {
@@ -88,5 +89,8 @@ export class FormObsComponent {
     console.log("last ____");
     console.log(this.aluno.value);
     this.store.dispatch(new CardActions.AddCard(this.aluno.value));
+    this._snackBar.open("O card do aluno " + nome + " foi criado!", "Ok!", {
+      duration: 2000
+    });
   }
 }

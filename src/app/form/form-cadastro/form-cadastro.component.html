@@ -11,7 +11,7 @@
     <mat-grid-tile>
       <mat-form-field appearance="outline">
         <mat-label>Nome</mat-label>
-        <input matInput placeholder="Digite" formControlName="nome" />
+        <input matInput placeholder="Digite" formControlName="nome" #nome />
       </mat-form-field>
     </mat-grid-tile>
     <mat-grid-tile>
@@ -37,7 +37,7 @@
         mat-raised-button
         color="primary"
         style="width: 100px; height: 60px; margin-top: -20px;"
-        (click)="salvar()"
+        (click)="salvar(nome.value)"
       >
         Salvar
       </button>

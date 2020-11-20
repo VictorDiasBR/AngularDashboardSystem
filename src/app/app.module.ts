@@ -72,6 +72,7 @@ import { reducer } from "./reducers/project.reducer";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HighchartsChartModule } from "highcharts-angular";
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from "@angular/material/form-field";
+import { DashboardGeralComponent } from "./dashboard-geral/dashboard-geral.component";
 @NgModule({
   declarations: [
     AppComponent,
@@ -85,7 +86,8 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from "@angular/material/form-field";
     GridFormComponent,
     FormCadastroComponent,
     FormObsComponent,
-    DadosApiComponent
+    DadosApiComponent,
+    DashboardGeralComponent
   ],
   imports: [
     HighchartsChartModule,

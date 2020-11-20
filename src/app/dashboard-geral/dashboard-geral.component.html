@@ -1,0 +1,41 @@
+<div class="example-boundary">
+  <div class="grafico-box" cdkDragBoundary=".example-boundary" cdkDrag>
+    <app-grafico align="center" style="margin-top: 485px;"></app-grafico>
+  </div>
+  <div class="tabela-box" cdkDragBoundary=".example-boundary" cdkDrag>
+    <app-tabela align="center" style="margin-top: 485px;"></app-tabela>
+  </div>
+  <div class="cards-box" cdkDragBoundary=".example-boundary" cdkDrag>
+    <div cdkDropListGroup>
+      <div class="example-container">
+        <h2>Não Analisados</h2>
+
+        <div
+          cdkDropList
+          [cdkDropListData]="naoAnalisados"
+          class="example-list"
+          (cdkDropListDropped)="drop($event)"
+        >
+          <div class="example-box" *ngFor="let item of naoAnalisados" cdkDrag>
+            {{item}}
+          </div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <h2>Analisados</h2>
+
+        <div
+          cdkDropList
+          [cdkDropListData]="analisados"
+          class="example-list"
+          (cdkDropListDropped)="drop($event)"
+        >
+          <div class="example-box" *ngFor="let item of analisados" cdkDrag>
+            {{item}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

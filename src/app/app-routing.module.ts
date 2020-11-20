@@ -3,12 +3,14 @@ import { RouterModule, Routes } from "@angular/router";
 import { DashboardOperacionalComponent } from "./dashboard-operacional/dashboard-operacional.component";
 import { DashboardEstrategicoComponent } from "./dashboard-estrategico/dashboard-estrategico.component";
 import { FormComponent } from "./form/form.component";
+import { DashboardGeralComponent } from "./dashboard-geral/dashboard-geral.component";
 
 const routes: Routes = [
   { path: "dashboard-operacional", component: DashboardOperacionalComponent },
   { path: "dashboard-estrategico", component: DashboardEstrategicoComponent },
   { path: "form", component: FormComponent },
-  { path: "", redirectTo: "dashboard-operacional",pathMatch: "full" },
+  { path: "dashboard-geral", component: DashboardGeralComponent },
+  { path: "", redirectTo: "dashboard-operacional", pathMatch: "full" }
 ];
 
 @NgModule({

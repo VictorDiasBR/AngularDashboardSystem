@@ -1,0 +1,46 @@
+<h1 align="center">Formulário de cadastro de alunos</h1>
+<br />
+<form [formGroup]="aluno">
+  <mat-grid-list cols="2" rowHeight="2:0.75">
+    <mat-grid-tile>
+      <mat-form-field appearance="outline">
+        <mat-label>Matrícula</mat-label>
+        <input matInput placeholder="Digite" formControlName="matricula" />
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field appearance="outline">
+        <mat-label>Nome</mat-label>
+        <input matInput placeholder="Digite" formControlName="nome" />
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field appearance="outline">
+        <mat-label>Nota AV1</mat-label>
+        <input matInput placeholder="Digite" formControlName="av1" />
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field appearance="outline">
+        <mat-label>Nota AV3</mat-label>
+        <input matInput placeholder="Digite" formControlName="av3" />
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field appearance="outline">
+        <mat-label>Av2</mat-label>
+        <input matInput placeholder="Digite" formControlName="av2" />
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button
+        mat-raised-button
+        color="primary"
+        style="width: 100px; height: 60px; margin-top: -20px;"
+        (click)="salvar()"
+      >
+        Salvar
+      </button>
+    </mat-grid-tile>
+  </mat-grid-list>
+</form>

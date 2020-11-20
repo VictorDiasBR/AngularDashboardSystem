@@ -1,0 +1,65 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+progress-bar {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  top: 220px;
+  left: 15px;
+}
+.grid-container {
+  margin: 20px;
+}
+
+.dashboard-card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 60px;
+}
+
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.example-header-image {
+  background-image: url("https://lh3.google.com/u/0/ogw/ADGmqu9kal01DMuF2TwIRw4FeuW_vGEzQJzNrMjE1B2m=s83-c-mo");
+  background-size: cover;
+}
+
+.plano-de-fundo {
+  background: #f1f7ff;
+}
+.tp {
+  opacity: 0;
+}
+.tpno {
+  opacity: 0.5;
+}
+
+.mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial";
+}
+
+.left,
+.right {
+  float: left;
+  width: calc(50% - 6em);
+  padding: 3em;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}

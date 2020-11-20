@@ -1,0 +1,60 @@
+<h1 align="center">Adicionar card de observação</h1>
+<br />
+<form [formGroup]="aluno">
+  <mat-grid-list cols="2" rowHeight="2:0.8">
+    <mat-grid-tile>
+      <mat-form-field
+        appearance="outline"
+        style="margin-top: -5%; margin-left: 45px;"
+      >
+        <mat-label>Título da OBS:</mat-label>
+        <input
+          matInput
+          placeholder="Informe o título da OBS:"
+          formControlName="obsTitulo"
+        />
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field
+        appearance="outline"
+        style="margin-top: -5%; margin-left: -56px;"
+      >
+        <mat-label>Alunos</mat-label>
+        <mat-select
+          [(ngModel)]="nomeSelected"
+          [ngModelOptions]="{standalone: true}"
+        >
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let nome of nomes" [value]="nome"
+            >{{nome}}</mat-option
+          >
+        </mat-select>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field
+        appearance="outline"
+        style="margin-top: -5%; margin-left: 45px;"
+      >
+        <mat-label>Registre a obs aqui:</mat-label>
+        <textarea formControlName="descricao" matInput></textarea>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button
+        mat-raised-button
+        color="primary"
+        style="
+          width: 100px;
+          height: 60px;
+          margin-top: -35px;
+          margin-left: -50px;
+        "
+        (click)="addCard()"
+      >
+        Salvar
+      </button>
+    </mat-grid-tile>
+  </mat-grid-list>
+</form>

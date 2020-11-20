@@ -1,0 +1,51 @@
+<div class="grid-container">
+  <h1 class="mat-h1" align="center">
+    Diagnóstico de alunos - Turma: ESW-MAT-PIT-8S-T1-21855-2020/2
+  </h1>
+  <mat-grid-list cols="2" rowHeight="350px">
+    <mat-grid-tile
+      *ngFor="let card of cardsStore|async"
+      [colspan]="1"
+      [rowspan]="1"
+    >
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{card.nome}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-grid-list cols="2" rowHeight="2:1">
+            <mat-grid-tile
+              ><mat-list role="list">
+                <mat-list-item role="listitem"
+                  >Matricula: {{card.matricula}}</mat-list-item
+                >
+                <mat-list-item role="listitem"
+                  >Nome: {{card.nome}}</mat-list-item
+                >
+                <mat-list-item role="listitem"
+                  >Média: {{card.media}}</mat-list-item
+                >
+              </mat-list></mat-grid-tile
+            >
+            <mat-grid-tile
+              ><mat-list role="list">
+                <mat-list-item role="listitem">AV1: {{card.av1}}</mat-list-item>
+                <mat-list-item role="listitem">AV2: {{card.av2}}</mat-list-item>
+                <mat-list-item role="listitem">AV3: {{card.av3}}</mat-list-item>
+              </mat-list></mat-grid-tile
+            >
+          </mat-grid-list>
+          <progress-bar [progress]="card.progresso" [color]="'#488aff'">
+          </progress-bar>
+        </mat-card-content>
+        <button mat-button [matMenuTriggerFor]="menu" class="more-button">
+          {{card.obsTitulo}}
+        </button>
+        <mat-menu #menu="matMenu">
+          {{card.descricao}}
+        </mat-menu>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

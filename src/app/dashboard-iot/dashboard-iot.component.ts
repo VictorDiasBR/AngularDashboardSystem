@@ -37,11 +37,24 @@ export class DashboardIotComponent implements OnInit {
   temp: number[] = [];
   umidade: number[] = [];
   ml: number[] = [];
+  times: string[] = [];
 
   ngOnInit() {
     this.temp.push(23, 38, 20, 29, 34, 16, 27, 29, 19, 40);
     this.umidade.push(80, 40, 70, 76, 49, 88, 55, 68, 81, 12);
     this.ml.push(2, 400, 40, 45, 120, 380, 60, 100, 45, 800);
+    this.times.push(
+      "10:56",
+      "10:56",
+      "10:56",
+      "10:56",
+      "10:56",
+      "10:56",
+      "10:56",
+      "10:56",
+      "10:56",
+      "10:56"
+    );
   }
 
   synchronizeTooltips = (e: any) => {
@@ -110,7 +123,7 @@ export class DashboardIotComponent implements OnInit {
               ) {
                 if (chart.xAxis[0].setExtremes) {
                   // It is null while updating
-                  chart.xAxis[0].setExtremes(e.min, e.max, undefined, false, {
+                  chart.xAxis[0].setExtremes(e.min, e.max, true, true, {
                     trigger: "syncExtremes"
                   });
                 }
@@ -119,9 +132,7 @@ export class DashboardIotComponent implements OnInit {
           }
         }
       },
-      labels: {
-        format: "{value} h"
-      }
+      categories: this.times
     },
     yAxis: {
       title: {
@@ -199,9 +210,7 @@ export class DashboardIotComponent implements OnInit {
           }
         }
       },
-      labels: {
-        format: "{value} h"
-      }
+      categories: this.times
     },
     yAxis: {
       title: {
@@ -279,9 +288,7 @@ export class DashboardIotComponent implements OnInit {
           }
         }
       },
-      labels: {
-        format: "{value} h"
-      }
+      categories: this.times
     },
     yAxis: {
       title: {

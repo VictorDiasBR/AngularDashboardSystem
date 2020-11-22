@@ -1,1 +1,32 @@
-<p>relatorio-iot works!</p>
+<table id="table-sparkline">
+  <thead>
+    <tr align="center">
+      <th>State</th>
+      <th>Income</th>
+      <th>Income per quarter</th>
+      <th>Costs</th>
+      <th>Costs per quarter</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody id="tbody-sparkline">
+    <tr align="center">
+      <th>Alabama</th>
+      <td>254</td>
+      <td>
+        <app-spark-line
+          [name]="'Alabama'"
+          [data]="[1, 2, 3, 4]"
+        ></app-spark-line>
+      </td>
+      <td>296</td>
+      <td>-42</td>
+      <td>
+        <app-spark-line
+          [name]="'Alabama'"
+          [data]="[3, 2, 1, 4]"
+        ></app-spark-line>
+      </td>
+    </tr>
+  </tbody>
+</table>

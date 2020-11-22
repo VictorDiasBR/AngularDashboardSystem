@@ -75,6 +75,7 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from "@angular/material/form-field";
 import { DashboardGeralComponent } from "./dashboard-geral/dashboard-geral.component";
 import { DashboardIotComponent } from './dashboard-iot/dashboard-iot.component';
 import { RelatorioIotComponent } from './relatorio-iot/relatorio-iot.component';
+import { SparkLineComponent } from './relatorio-iot/spark-line/spark-line.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -91,7 +92,8 @@ import { RelatorioIotComponent } from './relatorio-iot/relatorio-iot.component';
     DadosApiComponent,
     DashboardGeralComponent,
     DashboardIotComponent,
-    RelatorioIotComponent
+    RelatorioIotComponent,
+    SparkLineComponent
   ],
   imports: [
     HighchartsChartModule,

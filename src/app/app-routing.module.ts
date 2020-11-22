@@ -4,12 +4,13 @@ import { DashboardOperacionalComponent } from "./dashboard-operacional/dashboard
 import { DashboardEstrategicoComponent } from "./dashboard-estrategico/dashboard-estrategico.component";
 import { FormComponent } from "./form/form.component";
 import { DashboardGeralComponent } from "./dashboard-geral/dashboard-geral.component";
-
+import { DashboardIotComponent } from "./dashboard-iot/dashboard-iot.component";
 const routes: Routes = [
   { path: "dashboard-operacional", component: DashboardOperacionalComponent },
   { path: "dashboard-estrategico", component: DashboardEstrategicoComponent },
   { path: "form", component: FormComponent },
   { path: "dashboard-geral", component: DashboardGeralComponent },
+  { path: "dashboard-iot", component: DashboardIotComponent },
   { path: "", redirectTo: "dashboard-operacional", pathMatch: "full" }
 ];
 

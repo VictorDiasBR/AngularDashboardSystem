@@ -73,6 +73,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HighchartsChartModule } from "highcharts-angular";
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from "@angular/material/form-field";
 import { DashboardGeralComponent } from "./dashboard-geral/dashboard-geral.component";
+import { DashboardIotComponent } from './dashboard-iot/dashboard-iot.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -87,7 +88,8 @@ import { DashboardGeralComponent } from "./dashboard-geral/dashboard-geral.compo
     FormCadastroComponent,
     FormObsComponent,
     DadosApiComponent,
-    DashboardGeralComponent
+    DashboardGeralComponent,
+    DashboardIotComponent
   ],
   imports: [
     HighchartsChartModule,
